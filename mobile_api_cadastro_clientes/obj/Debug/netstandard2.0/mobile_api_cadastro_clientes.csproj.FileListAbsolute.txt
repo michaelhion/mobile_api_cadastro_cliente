@@ -1,0 +1,15 @@
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\bin\Debug\netstandard2.0\mobile_api_cadastro_clientes.deps.json
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\bin\Debug\netstandard2.0\mobile_api_cadastro_clientes.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\bin\Debug\netstandard2.0\ref\mobile_api_cadastro_clientes.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\bin\Debug\netstandard2.0\mobile_api_cadastro_clientes.pdb
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\mobile_api_cadastro_clientes.csprojAssemblyReference.cache
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\mobile_api_cadastro_clientes.AssemblyInfoInputs.cache
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\mobile_api_cadastro_clientes.AssemblyInfo.cs
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\mobile_api_cadastro_clientes.csproj.CoreCompileInputs.cache
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\mobile_api_cadastro_clientes.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\ref\mobile_api_cadastro_clientes.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\mobile_api_cadastro_clientes.pdb
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\Detalhes.xaml.g.cs

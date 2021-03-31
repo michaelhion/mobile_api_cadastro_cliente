@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "u38W5UQ1BQ+Ozcs1CPbqaFlhSAguEx5XVuR2QnzTB6rd9z0Wt+U23p38rW+prl5/t+H3KTya3w4K80cISWrWuw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\michael\\source\\repos\\mobile_api_cadastro_clientes\\mobile_api_cadastro_clientes.iOS\\mobile_api_cadastro_clientes.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\michael\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\michael\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

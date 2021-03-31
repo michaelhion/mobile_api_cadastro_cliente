@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile_api_cadastro_clientes.MainPage">
+
+    <StackLayout Margin="30">
+        <Frame BackgroundColor="Blue">
+            <Label HorizontalTextAlignment="Center">App cadastro de clientes</Label>
+        </Frame>
+        <Button x:Name="Criar_Cliente" Text="Criar Cliente" Clicked="Clicado"/>
+        <Entry x:Name="Nome" Placeholder="Nome"/>
+        <Entry x:Name="Sobrenome" Placeholder="Sobrenome"/>
+        <Entry x:Name="Idade" Placeholder="Idade"/>
+        <Frame BackgroundColor="Green" Margin="5">
+            <Label HorizontalOptions="Center">Lista de clientes</Label>
+        </Frame>
+        <ListView x:Name="MyListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FirstName}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+    
+</ContentPage>
