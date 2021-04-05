@@ -1,5 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Spreadsheet;
 using mobile_api_cadastro_clientes.Model;
+using MsgPack.Serialization;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -38,28 +39,46 @@ namespace mobile_api_cadastro_clientes.Services
                 throw ex;
             }
         }
-        public async Task AddProdutoAsync(ClienteModel cliente)
-        {
-            try
-            {
-                string url = "http://192.168.100.6:8000/api/Clientes";
-                var uri = new Uri(string.Format(url, cliente.Id));
-                var data = JsonConvert.SerializeObject(cliente);
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = null;
-                response = await client.PostAsync(uri, content);
 
-                if (!response.IsSuccessStatusCode)
-                {
-                    throw new Exception("Erro ao incluir produto");
-                }
-            }
-            catch (Exception ex)
+        public async Task AddClienteAsync(ClienteModel cliente, bool isNewItem = true)
+        {
+            string url = "http://192.168.100.6:8000/api/Clientes";
+            Uri uri = new Uri(string.Format(url, string.Empty));
+
+
+            //string json = JsonSerializer.Serialize<ClienteModel>(cliente, SerializerOptions);
+            string json = JsonConvert.SerializeObject(cliente);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = null;
+            if (isNewItem)
             {
-                throw ex;
+                response = await client.PostAsync(uri, content);
             }
+            
         }
-        public async Task UpdateProdutoAsync(ClienteModel cliente)
+        //public async Task AddClienteAsync(ClienteModel cliente)
+        //{
+        //    try
+        //    {
+        //        string url = "http://192.168.100.6:8000/api/Clientes";
+        //        var uri = new Uri(string.Format(url, cliente));
+        //        var data = JsonConvert.SerializeObject(cliente);
+        //        var content = new StringContent(data, Encoding.UTF8, "application/json");
+        //        HttpResponseMessage response = null;
+        //        response = await client.PostAsync(uri, content);
+
+        //        if (!response.IsSuccessStatusCode)
+        //        {
+        //            throw new Exception("Erro ao incluir produto");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        public async Task UpdateClienteAsync(ClienteModel cliente)
         {
             string url = "http://192.168.100.6:8000/api/Clientes";
             var uri = new Uri(string.Format(url, cliente.Id));
@@ -73,9 +92,9 @@ namespace mobile_api_cadastro_clientes.Services
                 throw new Exception("Erro ao atualizar produto");
             }
         }
-        public async Task DeletaProdutoAsync(ClienteModel cliente)
+        public async Task DeleteClienteAsync(ClienteModel cliente)
         {
-            string url = "http://www.macwebapi.somee.com/api/produtos/{0}";
+            string url = "http://192.168.100.6:8000/api/Clientes";
             var uri = new Uri(string.Format(url, cliente.Id));
             await client.DeleteAsync(uri);
         }

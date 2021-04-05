@@ -14,6 +14,15 @@
           "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {}
         }
       },
+      "MsgPack.Cli/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/monoandroid10/MsgPack.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10/MsgPack.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -1006,6 +1015,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "DocumentFormat.OpenXml": "2.12.3",
+          "MsgPack.Cli": "1.0.1",
           "Newtonsoft.Json": "13.0.1",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
@@ -1040,6 +1050,39 @@
         "lib/netstandard1.3/DocumentFormat.OpenXml.xml",
         "lib/netstandard2.0/DocumentFormat.OpenXml.dll",
         "lib/netstandard2.0/DocumentFormat.OpenXml.xml"
+      ]
+    },
+    "MsgPack.Cli/1.0.1": {
+      "sha512": "od0WujAAuPuRLoGfGNfE2iRPP7Kj+o174Oed2uirT03/Dp4rkccnEIqQl/QRHjly79sMwh6xKaIVsLqYwWtiHA==",
+      "type": "package",
+      "path": "msgpack.cli/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10/MsgPack.XML",
+        "lib/monoandroid10/MsgPack.dll",
+        "lib/net35/MsgPack.XML",
+        "lib/net35/MsgPack.dll",
+        "lib/net45/MsgPack.XML",
+        "lib/net45/MsgPack.dll",
+        "lib/net46/MsgPack.XML",
+        "lib/net46/MsgPack.dll",
+        "lib/netstandard1.1/MsgPack.XML",
+        "lib/netstandard1.1/MsgPack.dll",
+        "lib/netstandard1.3/MsgPack.XML",
+        "lib/netstandard1.3/MsgPack.dll",
+        "lib/netstandard2.0/MsgPack.XML",
+        "lib/netstandard2.0/MsgPack.dll",
+        "lib/sl5/MsgPack.XML",
+        "lib/sl5/MsgPack.dll",
+        "lib/uap10/MsgPack.XML",
+        "lib/uap10/MsgPack.dll",
+        "lib/windowsphone8/MsgPack.XML",
+        "lib/windowsphone8/MsgPack.dll",
+        "lib/xamarin.ios10/MsgPack.XML",
+        "lib/xamarin.ios10/MsgPack.dll",
+        "msgpack.cli.1.0.1.nupkg.sha512",
+        "msgpack.cli.nuspec"
       ]
     },
     "Newtonsoft.Json/13.0.1": {

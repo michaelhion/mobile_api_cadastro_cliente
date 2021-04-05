@@ -113,6 +113,10 @@
               "target": "Package",
               "version": "[2.12.3, )"
             },
+            "MsgPack.Cli": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

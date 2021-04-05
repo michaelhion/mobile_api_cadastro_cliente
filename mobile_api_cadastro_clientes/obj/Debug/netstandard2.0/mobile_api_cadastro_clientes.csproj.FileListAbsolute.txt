@@ -12,4 +12,5 @@ C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_c
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\mobile_api_cadastro_clientes.dll
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\ref\mobile_api_cadastro_clientes.dll
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\mobile_api_cadastro_clientes.pdb
-C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\Detalhes.xaml.g.cs
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\Criar.xaml.g.cs
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes\obj\Debug\netstandard2.0\Editar.xaml.g.cs

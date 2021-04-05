@@ -6,6 +6,7 @@ public class MonoPackageManager_Resources {
 		"DocumentFormat.OpenXml.dll",
 		"FormsViewGroup.dll",
 		"mobile_api_cadastro_clientes.dll",
+		"MsgPack.dll",
 		"Newtonsoft.Json.dll",
 		"System.IO.Packaging.dll",
 		"Xamarin.AndroidX.Activity.dll",
