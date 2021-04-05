@@ -3,21 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mobile_api_cadastro_clientes.MainPage">
 
-    <StackLayout Margin="30">
-        <Frame BackgroundColor="Blue">
-            <Label HorizontalTextAlignment="Center">App cadastro de clientes</Label>
-        </Frame>
-        <Button x:Name="Criar_Cliente" Text="Criar Cliente" Clicked="Clicado"/>
-        <Entry x:Name="Nome" Placeholder="Nome"/>
-        <Entry x:Name="Sobrenome" Placeholder="Sobrenome"/>
-        <Entry x:Name="Idade" Placeholder="Idade"/>
-        <Frame BackgroundColor="Green" Margin="5">
-            <Label HorizontalOptions="Center">Lista de clientes</Label>
-        </Frame>
-        <ListView x:Name="MyListView">
+    <StackLayout>
+        <Button x:Name="Criar_Cliente" Text="Criar cliente" Clicked="Criar"/>
+        <Button x:Name="Editar_Cliente" Text="Atualizar cliente" Clicked="Editar"/>
+        <Button x:Name="Deletar_Cliente" Text="Deletar cliente" Clicked="Deletar"/>
+        
+        <ListView x:Name="MyListView" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding FirstName}"/>
+                    
+                    <ViewCell>
+
+                        <StackLayout Orientation="Vertical" Margin="20">
+                            <Label Text="{Binding Id, StringFormat='Id: {0}'}"/>
+                            <Label Text="{Binding FirstName,StringFormat='Nome: {0}'}&#10;" Padding="5" Margin="5"/>
+                            <Label Text="{Binding Surname,StringFormat='Sobrenome: {0}'}&#10;" Padding="5" Margin="5"/>
+                            <Label Text="{Binding Age,StringFormat='Idade: {0}'}&#10;" Padding="5" Margin="5"/>
+                            <Label Text="{Binding CreationDate,StringFormat='Data Criação: {0}'}"/>
+                        </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

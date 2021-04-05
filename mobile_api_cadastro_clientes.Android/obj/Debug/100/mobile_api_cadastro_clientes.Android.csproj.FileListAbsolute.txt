@@ -575,3 +575,5 @@ C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_c
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\Newtonsoft.Json.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\DocumentFormat.OpenXml.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\System.IO.Packaging.dll

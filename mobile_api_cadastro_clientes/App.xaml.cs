@@ -10,6 +10,7 @@ namespace mobile_api_cadastro_clientes
         {
             InitializeComponent();
 
+
             MainPage = new NavigationPage(new MainPage());
         }
 

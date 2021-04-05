@@ -21,7 +21,17 @@ namespace mobile_api_cadastro_clientes
         {
             InitializeComponent();
         }
-        async void Clicado(System.Object sender, System.EventArgs e)
+        async void Criar(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Detalhes());
+        }
+
+        async void Editar(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Detalhes());
+        }
+
+        async void Deletar(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new Detalhes());
         }
@@ -34,5 +44,14 @@ namespace mobile_api_cadastro_clientes
             MyListView.ItemsSource = _post;
             base.OnAppearing();
         }
+
+        //private void listaClientes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    var clientes = e.SelectedItem as ClienteModel;
+
+        //    txtNome.Text = clientes.FirstName;
+        //    txtSobrenome.Text = clientes.Surname;
+        //    txtIdade.Text = clientes.Age.ToString();
+        //}
     }
 }
