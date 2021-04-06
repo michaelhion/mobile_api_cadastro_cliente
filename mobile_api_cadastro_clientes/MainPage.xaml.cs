@@ -1,5 +1,6 @@
 ﻿using mobile_api_cadastro_clientes.Model;
 using mobile_api_cadastro_clientes.Services;
+using MsgPack.Serialization;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,6 @@ namespace mobile_api_cadastro_clientes
 {
     public partial class MainPage : ContentPage
     {
-        private const string Url = "http://192.168.100.6:8000/api/Clientes";
         private readonly HttpClient client = new HttpClient();
         private List<ClienteModel> clientes;
         ApiService service;
@@ -38,17 +38,29 @@ namespace mobile_api_cadastro_clientes
 
         protected override async void OnAppearing()
         {
-            string content = await client.GetStringAsync(Url);
-            List<ClienteModel> posts = JsonConvert.DeserializeObject<List<ClienteModel>>(content);
-            clientes = new List<ClienteModel>(posts);
-            MyListView.ItemsSource = clientes;
+            Uri uri = new Uri(string.Format(Constants.ClienteUrl, string.Empty));
+            
+            HttpResponseMessage response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                List<ClienteModel> posts = JsonConvert.DeserializeObject<List<ClienteModel>>(content);
+                clientes = new List<ClienteModel>(posts);
+                MyListView.ItemsSource = clientes;
+            }
+            //string content = await client.GetStringAsync(Constants.ClienteUrl);
+            //List<ClienteModel> posts = JsonConvert.DeserializeObject<List<ClienteModel>>(content);
+            //clientes = new List<ClienteModel>(posts);
+
+            //MyListView.ItemsSource = clientes;
             base.OnAppearing();
         }
 
         async void AtualizaDados()
         {
-            clientes = await service.GetProdutosAsync();
-            MyListView.ItemsSource = clientes.OrderBy(item => item.FirstName).ToList();
+            clientes = await service.GetClienteAsync();
+
+            MyListView.ItemsSource = clientes;
         }
 
         private async void OnAtualizar(object sender, EventArgs e)
@@ -84,7 +96,7 @@ namespace mobile_api_cadastro_clientes
             txtId.Text = "";
             txtNome.Text = "";
             txtSobrenome.Text = "";
-            //txtIdade.Text = "";
+            txtIdade.Text = "";
         }
 
         private void MyListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -93,7 +105,7 @@ namespace mobile_api_cadastro_clientes
             txtId.Text = cliente.Id;
             txtNome.Text = cliente.FirstName;
             txtSobrenome.Text = cliente.Surname;
-            //txtIdade.Text = cliente.Age.ToString();
+            txtIdade.Text = cliente.Age.ToString();
         }
 
         private bool Valida()
@@ -116,6 +128,7 @@ namespace mobile_api_cadastro_clientes
                 ClienteModel clienteDeletar = (ClienteModel)mi.CommandParameter;
                 await service.DeleteClienteAsync(clienteDeletar);
                 LimpaCliente();
+                await service.GetClienteAsync();
                 AtualizaDados();
             }
             catch (Exception ex)

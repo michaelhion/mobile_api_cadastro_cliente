@@ -578,3 +578,10 @@ C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_c
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\lp\80\jl\files.cache
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\lp\88\jl\files.cache
 C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\MsgPack.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\System.Buffers.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\System.Memory.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\System.Text.Encodings.Web.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\System.Text.Json.dll
+C:\Users\michael\source\repos\mobile_api_cadastro_clientes\mobile_api_cadastro_clientes.Android\obj\Debug\100\android\assets\System.Threading.Tasks.Extensions.dll
