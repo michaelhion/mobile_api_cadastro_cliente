@@ -21,7 +21,6 @@ namespace mobile_api_cadastro_clientes.Services
         public ApiService()
         {
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://192.168.100.6:8000/api/Clientes");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
@@ -29,7 +28,7 @@ namespace mobile_api_cadastro_clientes.Services
         {
             try
             {
-                string url = "http://192.168.100.6:8000/api/Clientes";
+                string url = Constants.ClienteUrl;
                 var response = await client.GetStringAsync(url);
                 var clientes = JsonConvert.DeserializeObject<List<ClienteModel>>(response);
                 return clientes;
@@ -42,11 +41,10 @@ namespace mobile_api_cadastro_clientes.Services
 
         public async Task AddClienteAsync(ClienteModel cliente, bool isNewItem = true)
         {
-            string url = "http://192.168.100.6:8000/api/Clientes";
-            Uri uri = new Uri(string.Format(url, string.Empty));
+            
+            Uri uri = new Uri(string.Format(Constants.ClienteUrl, string.Empty));
 
 
-            //string json = JsonSerializer.Serialize<ClienteModel>(cliente, SerializerOptions);
             string json = JsonConvert.SerializeObject(cliente);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -57,46 +55,35 @@ namespace mobile_api_cadastro_clientes.Services
             }
             
         }
-        //public async Task AddClienteAsync(ClienteModel cliente)
-        //{
-        //    try
-        //    {
-        //        string url = "http://192.168.100.6:8000/api/Clientes";
-        //        var uri = new Uri(string.Format(url, cliente));
-        //        var data = JsonConvert.SerializeObject(cliente);
-        //        var content = new StringContent(data, Encoding.UTF8, "application/json");
-        //        HttpResponseMessage response = null;
-        //        response = await client.PostAsync(uri, content);
-
-        //        if (!response.IsSuccessStatusCode)
-        //        {
-        //            throw new Exception("Erro ao incluir produto");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
+        
         public async Task UpdateClienteAsync(ClienteModel cliente)
         {
-            string url = "http://192.168.100.6:8000/api/Clientes";
-            var uri = new Uri(string.Format(url, cliente.Id));
-            var data = JsonConvert.SerializeObject(cliente);
-            var content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = null;
-            response = await client.PutAsync(uri, content);
+            string id = cliente.Id;
+            string end = "/" + id;
+            string uri = Constants.ClienteUrl + end;
+            //Uri uri = new Uri(string.Format(Constants.ClienteUrl, cliente.Id));
 
-            if (!response.IsSuccessStatusCode)
-            {
-                throw new Exception("Erro ao atualizar produto");
-            }
+
+            string json = JsonConvert.SerializeObject(cliente);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = null;
+
+            response = await client.PutAsync(uri, content);
         }
         public async Task DeleteClienteAsync(ClienteModel cliente)
         {
-            string url = "http://192.168.100.6:8000/api/Clientes";
-            var uri = new Uri(string.Format(url, cliente.Id));
-            await client.DeleteAsync(uri);
+            string id = cliente.Id;
+            string end = "/" + id;
+            string uri = Constants.ClienteUrl + end;
+            //string finalUri = "/" + cliente.Id;
+            //var uri = new Uri(string.Format(Constants.ClienteUrl, finalUri));
+            HttpResponseMessage resp = await client.DeleteAsync(uri);
+            if (!resp.IsSuccessStatusCode)
+            {
+                throw new Exception("Erro ao deletar clientes");
+
+            }
         }
     }
 }

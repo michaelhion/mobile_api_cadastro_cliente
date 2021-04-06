@@ -1,4 +1,5 @@
 ﻿using mobile_api_cadastro_clientes.Model;
+using mobile_api_cadastro_clientes.Services;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,33 +16,57 @@ namespace mobile_api_cadastro_clientes
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Criar : ContentPage
     {
-        private const string Url = "http://192.168.100.6:8000/api/Clientes";
-        private readonly HttpClient client = new HttpClient();
-        private List<ClienteModel> clientes;
+        ApiService service;
+        List<ClienteModel> clientes;
         public Criar()
         {
             InitializeComponent();
+            service = new ApiService();
         }
 
-        private async Task AddClienteAsync(ClienteModel clientes)
+        private async void Adicionar(object sender, EventArgs e)
         {
-            try
+            if (Valida())
             {
-                string url = "http://192.168.100.6:8000/api/Clientes";
-                var uri = new Uri(string.Format(url, clientes.Id));
-                var data = JsonConvert.SerializeObject(clientes);
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = null;
-                response = await client.PostAsync(uri, content);
-
-                if (!response.IsSuccessStatusCode)
+                ClienteModel novoCliente = new ClienteModel
                 {
-                    throw new Exception("Erro ao incluir produto");
+                    FirstName = txtNome.Text,
+                    Surname = txtSobrenome.Text,
+                    Age = Convert.ToInt32(txtIdade.Text)
+                };
+                try
+                {
+                    await service.AddClienteAsync(novoCliente);
+                    LimpaProduto();
+                    //AtualizaDados();
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Erro", ex.Message, "OK");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                await DisplayAlert("Erro", "Dados inválidos...", "OK");
+            }
+        }
+
+        private void LimpaProduto()
+        {
+            txtNome.Text = "";
+            txtSobrenome.Text = "";
+            txtIdade.Text = "";
+        }
+
+        private bool Valida()
+        {
+            if (string.IsNullOrEmpty(txtNome.Text) && string.IsNullOrEmpty(txtSobrenome.Text) && string.IsNullOrEmpty(txtIdade.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 

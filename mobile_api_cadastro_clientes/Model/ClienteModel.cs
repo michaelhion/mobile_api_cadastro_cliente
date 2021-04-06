@@ -4,7 +4,7 @@ using System.Text;
 
 namespace mobile_api_cadastro_clientes.Model
 {
-    class ClienteModel
+    public class ClienteModel
     {
         public string Id { get; set; }
 

@@ -4,9 +4,10 @@
              x:Class="mobile_api_cadastro_clientes.Criar">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtNome" Placeholder="Nome" />
+            <Entry x:Name="txtSobrenome" Placeholder="Sobrenome"/>
+            <Entry x:Name="txtIdade" Placeholder="Idade" />
+            <Button Text="Adicionar" Clicked="Adicionar" FontSize="Small"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
