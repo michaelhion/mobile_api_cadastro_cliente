@@ -24,7 +24,7 @@
     <EmbeddedResource Update="Criar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Editar.xaml">
+    <EmbeddedResource Update="Detalhes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

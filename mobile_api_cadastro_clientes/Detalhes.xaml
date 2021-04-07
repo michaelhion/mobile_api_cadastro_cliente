@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile_api_cadastro_clientes.Detalhes">
+    <ContentPage.Content>
+        <!--<ViewCell.ContextActions>
+            <MenuItem Clicked="OnAtualizar" CommandParameter="{Binding .}" Text="Atualizar" />
+            <MenuItem Clicked="OnDeletar" CommandParameter="{Binding .}" Text="Deletar" IsDestructive="True" />
+        </ViewCell.ContextActions>-->
+        <StackLayout x:Name="mostrarEntry">
+            <Entry x:Name="txtId" Placeholder="Id"/>
+            <Entry x:Name="txtNome" Placeholder="Nome" />
+            <Entry x:Name="txtSobrenome" Placeholder="Sobrenome"/>
+            <Entry x:Name="txtIdade" Placeholder="Idade" />
+            <Button Text="Atualizar" Clicked="OnAtualizar"/>
+            <Button Text="Deletar" Clicked="OnDeletar"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

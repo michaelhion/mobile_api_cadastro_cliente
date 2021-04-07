@@ -38,7 +38,6 @@ namespace mobile_api_cadastro_clientes
                 {
                     await service.AddClienteAsync(novoCliente);
                     LimpaProduto();
-                    //AtualizaDados();
                 }
                 catch (Exception ex)
                 {
@@ -49,6 +48,7 @@ namespace mobile_api_cadastro_clientes
             {
                 await DisplayAlert("Erro", "Dados inválidos...", "OK");
             }
+            await Navigation.PushAsync(new MainPage());
         }
 
         private void LimpaProduto()

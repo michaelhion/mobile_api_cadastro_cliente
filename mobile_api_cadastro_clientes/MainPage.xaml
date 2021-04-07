@@ -1,37 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:mobile_api_cadastro_clientes.Model"
              x:Class="mobile_api_cadastro_clientes.MainPage">
 
+   
     <StackLayout>
-
-        <StackLayout >
-            <Entry x:Name="txtId" Placeholder="Id"/>
-            <Entry x:Name="txtNome" Placeholder="Nome" />
-            <Entry x:Name="txtSobrenome" Placeholder="Sobrenome"/>
-            <Entry x:Name="txtIdade" Placeholder="Idade" />
-            <Entry x:Name="txtData" Placeholder="Data criação"/>
-            <!--<Button Text="Atualizar" Clicked="Atualizar" FontSize="Small"/>-->
-        </StackLayout>
-        
-        <Button x:Name="Criar_Cliente" Text="Criar cliente" Clicked="Criar"/>
-        <Button x:Name="Editar_Cliente" Text="Atualizar cliente" Clicked="Editar"/>
-        <!--<Button x:Name="Deletar_Cliente" Text="Deletar cliente" Clicked="Deletar"/>-->
-
-        <ListView x:Name="MyListView" HasUnevenRows="True" ItemSelected="MyListView_ItemSelected">
+        <Button x:Name="Criar_Cliente" Text="Adicionar" Clicked="Criar"/>
+        <ListView x:Name="MyListView"  HasUnevenRows="True" ItemSelected="MyListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     
                     <ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Clicked="OnAtualizar" CommandParameter="{Binding .}" Text="Atualizar" />
-                            <MenuItem Clicked="OnDeletar" CommandParameter="{Binding .}" Text="Deletar" IsDestructive="True" />
-                        </ViewCell.ContextActions>
+
                         <StackLayout Orientation="Vertical" Margin="20">
-                            <Label Text="{Binding Id, StringFormat='Id: {0}'}"/>
                             <Label Text="{Binding FirstName,StringFormat='Nome: {0}'}&#10;" Padding="5" Margin="5"/>
                             <Label Text="{Binding Surname,StringFormat='Sobrenome: {0}'}&#10;" Padding="5" Margin="5"/>
-                            <Label Text="{Binding Age,StringFormat='Idade: {0}'}&#10;" Padding="5" Margin="5"/>
                             <Label Text="{Binding CreationDate,StringFormat='Data Criação: {0}'}"/>
                         </StackLayout>
                     </ViewCell>
