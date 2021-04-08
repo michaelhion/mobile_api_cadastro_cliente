@@ -8,10 +8,11 @@
             <MenuItem Clicked="OnDeletar" CommandParameter="{Binding .}" Text="Deletar" IsDestructive="True" />
         </ViewCell.ContextActions>-->
         <StackLayout x:Name="mostrarEntry">
-            <Entry x:Name="txtId" Placeholder="Id"/>
+            <Entry x:Name="txtId" Placeholder="Id" IsEnabled="False"/>
             <Entry x:Name="txtNome" Placeholder="Nome" />
             <Entry x:Name="txtSobrenome" Placeholder="Sobrenome"/>
             <Entry x:Name="txtIdade" Placeholder="Idade" />
+            <Entry x:Name="txtData" IsEnabled="False"/>
             <Button Text="Atualizar" Clicked="OnAtualizar"/>
             <Button Text="Deletar" Clicked="OnDeletar"/>
         </StackLayout>

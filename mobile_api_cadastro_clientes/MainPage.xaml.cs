@@ -35,6 +35,10 @@ namespace mobile_api_cadastro_clientes
                 clientes = new List<ClienteModel>(posts);
                 MyListView.ItemsSource = clientes;
             }
+            else
+            {
+                await DisplayAlert("Alerta","Nenhum usuário cadastrado! Por favor adicione um.", "Ok");
+            }
             
             base.OnAppearing();
         }

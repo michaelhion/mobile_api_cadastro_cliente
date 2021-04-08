@@ -29,6 +29,7 @@ namespace mobile_api_cadastro_clientes
             txtNome.Text = clienteModel.FirstName;
             txtSobrenome.Text = clienteModel.Surname;
             txtIdade.Text = clienteModel.Age.ToString();
+            txtData.Text = clienteModel.CreationDate.ToString();
         }
 
         private void LimpaCliente()
@@ -37,6 +38,7 @@ namespace mobile_api_cadastro_clientes
             txtNome.Text = "";
             txtSobrenome.Text = "";
             txtIdade.Text = "";
+            txtData.Text = "";
         }
 
         private bool Valida()

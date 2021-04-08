@@ -15,7 +15,8 @@
                         <StackLayout Orientation="Vertical" Margin="20">
                             <Label Text="{Binding FirstName,StringFormat='Nome: {0}'}&#10;" Padding="5" Margin="5"/>
                             <Label Text="{Binding Surname,StringFormat='Sobrenome: {0}'}&#10;" Padding="5" Margin="5"/>
-                            <Label Text="{Binding CreationDate,StringFormat='Data Criação: {0}'}"/>
+                            <Label Text="{Binding Age,StringFormat='Idade: {0}'}&#10;" Padding="5" Margin="5"/>
+                            <Label Text="{Binding CreationDate,StringFormat='Data Criação: {0}'}" Padding="5" Margin="5"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
